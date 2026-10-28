@@ -1,0 +1,732 @@
+/* ============================================================
+   PrepPulse - PRMIT&R Training & Placement Cell Landing Styles
+   ============================================================ */
+
+/* ---------- Navbar Brand & Layout ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 25;
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+
+.navbar__nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar__links a {
+  text-decoration: none;
+  font-size: 0.94rem;
+  font-weight: 600;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.18s ease;
+}
+
+.navbar__toggle {
+  display: none;
+  background: none;
+  border: 0;
+  padding: 0.4rem;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.logo__text-wrap {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.logo__sub {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 860px) {
+  .navbar__toggle {
+    display: inline-flex;
+  }
+  .navbar__nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 1.25rem 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+  .navbar__nav--open {
+    display: flex;
+  }
+  .navbar__links {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .navbar__links a {
+    display: block;
+    padding: 0.65rem 0.5rem;
+  }
+}
+
+/* ---------- Collegiate Hero ---------- */
+.hero-collegiate {
+  padding: clamp(3rem, 6vw, 4.75rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+  background:
+    linear-gradient(180deg, #f0f5fa 0%, #ffffff 100%);
+  border-bottom: 1px solid #dde5eb;
+  position: relative;
+}
+
+.hero-collegiate__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.hero-collegiate__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.95rem;
+  background: #e8f0fe;
+  color: #084b8a;
+  border: 1px solid #c8daf8;
+  border-radius: 30px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.hero-collegiate__title {
+  font-size: clamp(1.9rem, 4vw, 2.85rem);
+  font-weight: 800;
+  color: #0a2d54;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  max-width: 24ch;
+}
+
+.hero-collegiate__lead {
+  max-width: 65ch;
+  margin: 1.25rem 0 2rem;
+  font-size: 1.08rem;
+  color: #445668;
+  line-height: 1.65;
+}
+
+.hero-collegiate__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 0.96rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.hero-btn--primary {
+  background: #084b8a;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(8, 75, 138, 0.25);
+}
+
+.hero-btn--primary:hover {
+  background: #063968;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(8, 75, 138, 0.3);
+}
+
+.hero-btn--outline {
+  background: #ffffff;
+  color: #084b8a;
+  border: 1.5px solid #084b8a;
+}
+
+.hero-btn--outline:hover {
+  background: #f0f6fc;
+  transform: translateY(-2px);
+}
+
+/* ---------- Notices Strip ---------- */
+.notices-strip {
+  background: #ffffff;
+  border-bottom: 1px solid #dde5eb;
+  padding: 2rem 0 2.25rem;
+}
+
+.notices-strip__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #084b8a;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.notices-strip__title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.notices-strip__bell {
+  color: #dc2626;
+}
+
+.notices-strip__title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0b2540;
+}
+
+.notices-strip__badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #084b8a;
+  background: #e9f2fa;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+}
+
+.notices-strip__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .notices-strip__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.notice-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #084b8a;
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  transition: background 0.18s, border-color 0.18s;
+}
+
+.notice-item:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.notice-item__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.notice-item__tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #084b8a;
+  color: #ffffff;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.notice-item__new {
+  font-size: 0.7rem;
+  font-weight: 800;
+  background: #dc2626;
+  color: #ffffff;
+  padding: 0.12rem 0.4rem;
+  border-radius: 3px;
+}
+
+.notice-item__date {
+  font-size: 0.76rem;
+  color: #64748b;
+  margin-left: auto;
+  font-weight: 500;
+}
+
+.notice-item__text {
+  font-size: 0.92rem;
+  color: #1e293b;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+/* ---------- Common Section Heads ---------- */
+.section {
+  padding: clamp(3rem, 6vw, 4.5rem) 0;
+}
+
+.section__head {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section__sub-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #084b8a;
+  margin-bottom: 0.4rem;
+}
+
+.section__sub-badge--light {
+  color: #f2a93b;
+}
+
+.section__head h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  font-weight: 800;
+  color: #0b2540;
+}
+
+.section__head p {
+  margin-top: 0.5rem;
+  color: #52667a;
+  font-size: 1rem;
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+.section__head--light h2 {
+  color: #ffffff;
+}
+
+.section__head--light p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* ---------- Roles Grid ---------- */
+.roles-section {
+  background: #f8fafc;
+}
+
+.roles__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.role-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #dde5eb;
+  border-radius: 12px;
+  padding: 1.85rem 1.6rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: all 0.22s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(8, 75, 138, 0.1);
+  border-color: #084b8a;
+}
+
+.role-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.15rem;
+}
+
+.role-card__icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  background: #eef5fc;
+  color: #084b8a;
+  border-radius: 10px;
+}
+
+.role-card__badge-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #084b8a;
+  background: #e6f0fa;
+  padding: 0.2rem 0.55rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.role-card h3 {
+  font-size: 1.28rem;
+  font-weight: 800;
+  color: #0b2540;
+  margin-bottom: 0.5rem;
+}
+
+.role-card__desc {
+  font-size: 0.94rem;
+  color: #556779;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.role-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+  flex: 1;
+}
+
+.role-card__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.role-card__check {
+  color: #16a34a;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.role-card__btn {
+  background: #084b8a;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.role-card__btn:hover {
+  background: #063968;
+}
+
+@media (max-width: 960px) {
+  .roles__grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+}
+
+/* ---------- Stats Section ---------- */
+.stats-section {
+  background: #084b8a;
+  color: #ffffff;
+  padding: clamp(3rem, 6vw, 4.5rem) 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  padding: 1.85rem 1.25rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.stat-card__icon {
+  display: inline-flex;
+  color: #f2a93b;
+  margin-bottom: 0.75rem;
+}
+
+.stat-card__val {
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  line-height: 1.15;
+}
+
+.stat-card__label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Recruiters Section ---------- */
+.recruiters-section {
+  background: #ffffff;
+}
+
+.recruiters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1rem;
+}
+
+.recruiter-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.95rem 1.2rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #1e293b;
+  transition: all 0.2s ease;
+}
+
+.recruiter-badge:hover {
+  border-color: #084b8a;
+  background: #eef5fc;
+  color: #084b8a;
+  transform: translateY(-2px);
+}
+
+.recruiter-badge__icon {
+  color: #084b8a;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .recruiters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .recruiters-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- About Pillars ---------- */
+.about-section {
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.pillar-card {
+  background: #ffffff;
+  border: 1px solid #dde5eb;
+  border-radius: 12px;
+  padding: 1.85rem 1.6rem;
+}
+
+.pillar-card__icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  background: #eef5fc;
+  color: #084b8a;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.pillar-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0b2540;
+  margin-bottom: 0.6rem;
+}
+
+.pillar-card p {
+  font-size: 0.94rem;
+  color: #556779;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .about-pillars {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Contact Box ---------- */
+.contact-section {
+  background: #ffffff;
+  border-top: 1px solid #dde5eb;
+}
+
+.contact-box {
+  background: #f8fafc;
+  border: 1px solid #dde5eb;
+  border-radius: 14px;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-box__info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-box__info h2 {
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 800;
+  color: #0b2540;
+  margin-bottom: 0.25rem;
+}
+
+.contact-box__college {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #084b8a;
+  margin-bottom: 1.25rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.94rem;
+  color: #334155;
+}
+
+.contact-item a {
+  color: #084b8a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.contact-item__icon {
+  color: #084b8a;
+  flex-shrink: 0;
+}
+
+.contact-divider {
+  color: #94a3b8;
+}
+
+.contact-box__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.college-external-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #084b8a;
+  text-decoration: none;
+  padding: 0.4rem 0.2rem;
+}
+
+.college-external-btn:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  border-top: 1px solid #dde5eb;
+  background: #0b2540;
+  color: #ffffff;
+  padding: 2.25rem 0;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.85rem;
+}
+
+.footer .logo__text {
+  color: #ffffff;
+}
+
+.footer .logo__mark {
+  background: #f2a93b;
+  color: #0b2540;
+}
+
+.footer__affiliation {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 65ch;
+  line-height: 1.5;
+}
+
+.footer__copy {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+}

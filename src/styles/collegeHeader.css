@@ -1,0 +1,236 @@
+/* ============================================================
+   College Header (PRMIT&R Badnera - Amravati)
+   ============================================================ */
+.college-header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #e2e8f0;
+  padding: 0.85rem 1.25rem 0.75rem;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  position: relative;
+  z-index: 30;
+}
+
+.college-header__inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Left & Right Logo Columns */
+.college-header__logo-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.college-header__logo-col--left {
+  justify-self: start;
+}
+
+.college-header__logo-col--right {
+  justify-self: end;
+}
+
+.college-header__logo {
+  height: clamp(80px, 7.5vw, 110px);
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
+  transition: transform 0.25s ease;
+}
+
+.college-header__logo:hover {
+  transform: scale(1.04);
+}
+
+.college-header__naac-logo {
+  height: clamp(70px, 6.8vw, 98px);
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
+  transition: transform 0.25s ease;
+}
+
+.college-header__naac-logo:hover {
+  transform: scale(1.04);
+}
+
+.college-header__cgpa {
+  color: #dc2626;
+  font-weight: 800;
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+  text-align: center;
+  margin-top: 0.2rem;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+/* Center Text Details */
+.college-header__text-col {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+}
+
+.college-header__society {
+  font-size: clamp(0.85rem, 1.15vw, 1.05rem);
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 2px 0;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+
+.college-header__title {
+  font-size: clamp(1.2rem, 2.3vw, 1.85rem);
+  font-weight: 800;
+  color: #084b8a;
+  line-height: 1.2;
+  margin: 2px 0;
+  letter-spacing: -0.015em;
+}
+
+.college-header__location {
+  font-size: clamp(1.05rem, 2vw, 1.6rem);
+  font-weight: 800;
+  color: #084b8a;
+  line-height: 1.2;
+  margin: 2px 0 4px 0;
+  letter-spacing: -0.01em;
+}
+
+.college-header__former {
+  font-size: clamp(0.78rem, 1.02vw, 0.95rem);
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 2px 0;
+  line-height: 1.25;
+}
+
+.college-header__autonomous {
+  font-size: clamp(0.98rem, 1.35vw, 1.25rem);
+  font-weight: 800;
+  color: #dc2626;
+  margin: 2px 0;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+
+.college-header__affiliation {
+  font-size: clamp(0.78rem, 1.02vw, 0.95rem);
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.25;
+}
+
+/* ============================================================
+   Collegiate Blue Navigation Bar (Matching official style)
+   ============================================================ */
+.navbar--collegiate {
+  background: #084b8a;
+  border-bottom: 2px solid #063968;
+  box-shadow: 0 2px 8px rgba(8, 75, 138, 0.25);
+}
+
+.navbar--collegiate .logo__mark {
+  background: #f2a93b;
+  color: #084b8a;
+}
+
+.navbar--collegiate .logo__text {
+  color: #ffffff;
+}
+
+.navbar--collegiate .navbar__links a {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+}
+
+.navbar--collegiate .navbar__links a:hover {
+  color: #f2a93b;
+}
+
+.navbar--collegiate .navbar__toggle {
+  color: #ffffff;
+}
+
+.navbar--collegiate .navbar__cta {
+  background: #f2a93b;
+  color: #0b2540;
+  font-weight: 700;
+}
+
+.navbar--collegiate .navbar__cta:hover {
+  background: #ffb84d;
+  color: #081d33;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 900px) {
+  .college-header {
+    padding: 0.7rem 0.8rem 0.6rem;
+  }
+  .college-header__inner {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .college-header {
+    padding: 0.6rem 0.5rem;
+  }
+
+  .college-header__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .college-header__logo-col--left {
+    order: 1;
+  }
+
+  .college-header__logo-col--right {
+    order: 2;
+  }
+
+  .college-header__text-col {
+    order: 3;
+    width: 100%;
+    margin-top: 0.25rem;
+    padding: 0;
+  }
+
+  .college-header__logo {
+    height: 58px;
+  }
+
+  .college-header__naac-logo {
+    height: 50px;
+  }
+
+  .college-header__cgpa {
+    font-size: 0.8rem;
+  }
+
+  .navbar--collegiate .navbar__nav {
+    background: #084b8a;
+    border-bottom: 2px solid #063968;
+  }
+
+  .navbar--collegiate .navbar__links a {
+    color: #ffffff;
+  }
+}
